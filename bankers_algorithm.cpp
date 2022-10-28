@@ -1,5 +1,5 @@
 /***
-Implemetation of Bankers Algorithm by Labid
+Implemetation of Banker's Algorithm by Labid
 Space Complexity: O(n)
 Time Complxity: O(n^2)
 GitHub: labidzy
@@ -15,7 +15,7 @@ class process{
     public:
         bool safe = false;
         //set methods
-        void insert(vector<int> a, vector<int> m){
+        void insert(vector<int> &a, vector<int> &m){
             for(int i=0;i<a.size();++i){
                 alloc.push_back(a[i]);
                 max.push_back(m[i]);
