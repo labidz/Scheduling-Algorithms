@@ -113,9 +113,21 @@ void print(vector<process> &processes){
 }
 
 int main(){
-    //setting all the values
-    vector<vector<int>> allocation{{1,0,3},{2,1,1},{3,1,2},{4,0,2},{2,1,3}};
-    vector<vector<int>> max{{6,4,4},{5,3,2},{4,4,3},{6,0,8},{4,3,4}};
+    //setting all the values [MID Question]
+    vector<vector<int>> allocation{
+        {1,0,3},
+        {2,1,1},
+        {3,1,2},
+        {4,0,2},
+        {2,1,3}
+    };
+    vector<vector<int>> max{
+        {6,4,4},
+        {5,3,2},
+        {4,4,3},
+        {6,0,8},
+        {4,3,4}
+    };
     vector<int> available{3,4,2};
 
     //declaring the processes and essentials
