@@ -82,7 +82,7 @@ void calculateSafeSequence(vector<process> &processes, vector<int> &available, i
         if(i<seq.size()-1) cout<<"->";
     }
     //last aviable resource
-    cout<<"\nAviable: ";
+    cout<<"\nAvaiable: ";
     for(auto elm : available) cout<<"("<<elm<<")";
 }
 
