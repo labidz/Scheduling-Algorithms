@@ -35,6 +35,10 @@ void RR(vector<process> &p, int timeQuantum){
 
 		cur = waiting[0];
 
+		if(cur.at>prevCT){
+			prevCT = cur.at;
+		}
+
 		if(cur.bt <= timeQuantum){
 			waiting.erase(waiting.begin());
 			time = cur.bt;
