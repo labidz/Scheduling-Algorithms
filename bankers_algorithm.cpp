@@ -1,7 +1,7 @@
 /***
 Implemetation of Banker's Algorithm by Labid
 Space Complexity: O(n)
-Time Complxity: O(n^2)
+Time Complexity: O(n^2)
 GitHub: labidzy
 ****/
 
