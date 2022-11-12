@@ -28,23 +28,18 @@ void SRTF(vector<process> &p){
 	while(p.size()!=0 or waiting.size()!=0){
 		process cur;
 		if(waiting.size() == 0){
-			cur = p[0];
+			waiting.push_back(p[0]);
+			p.erase(p.begin());
+		}
 
-			if(cur.at>count){
-				count = cur.at;
-			}
+		cur = waiting[0];
 
-			if(cur.bt == 1) p.erase(p.begin());
-			else p[0].bt -= 1;
+		if(count<cur.at) count = cur.at;
+
+		if(cur.bt == 1){
+			waiting.erase(waiting.begin());
 		}else{
-			cur = waiting[0];
-
-			if(cur.at>count){
-				count = cur.at;
-			}
-			
-			if(cur.bt == 1) waiting.erase(waiting.begin());
-			else waiting[0].bt -= 1;
+			waiting[0].bt -= 1;
 		}
 
 		cout<<count<<"-|P"<<cur.id+1<<"|-"<<++count<<endl;
@@ -59,7 +54,7 @@ void SRTF(vector<process> &p){
 }
 
 int main(){
-	int a[] = {3,0,99,1,5};					//arrival time[i]
+	int a[] = {3,0,9,1,5};					//arrival time[i]
 	int b[] = {7,2,9,5,4}; 					//brust time a[i]
 
 	int n = sizeof(a) / sizeof(a[0]);
